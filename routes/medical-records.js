@@ -62,7 +62,7 @@ router.post("/", authenticateToken, requireRole("doctor"), async (req,res) => {
   }
 });
 
-router.get ("/medical-records/:patient_id", authenticateToken, requireRole("doctor"), async (req, res) => {
+router.get ("/:patient_id", authenticateToken, requireRole("doctor"), async (req, res) => {
     const { patient_id } = req.params;
 
     try {
